@@ -1,0 +1,11 @@
+###Dcor RAD workflow notes & documentation
+
+Working through Dcor RAD data from February, using Mike's 'workflow', then play around with other downstream applications
+
+Start with two files-one F one R (one lane)
+-upstream, check file sizes, lines (should be same between F and R), other QC checks-see Mike's PDF
+1. Run 'run_BestRadSplit.sh'-calls for BarcodeSplitListBestRadPairedEnd.pl (so also need that loaded)
+  - set arguments in command line for input F and R and the prefix you want it to add to all the files (open perl script for details)
+2. Index BWA with Green turtle reference genome
+3. Align PE reads to reference using BWA
+  -see RAD_bwa.sh
