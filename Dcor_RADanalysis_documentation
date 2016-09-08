@@ -6,6 +6,9 @@ Start with two files-one F one R (one lane)
 -upstream, check file sizes, lines (should be same between F and R), other QC checks-see Mike's PDF
 1. Run 'run_BestRadSplit.sh'-calls for BarcodeSplitListBestRadPairedEnd.pl (so also need that loaded)
   - set arguments in command line for input F and R and the prefix you want it to add to all the files (open perl script for details)
+  - go back with Mike to double check all this is doing since in perl (flip trim, demultiplex-but also need to remove adaptor sequence,barcodes and low quality sequence trimming-check where these steps are?)
+**come back and add filtering/QC steps here-run FASTQC, etc. see Brice's talk notes   
 2. Index BWA with Green turtle reference genome
 3. Align PE reads to reference using BWA
   -see RAD_bwa.sh
+4. Remove PCR duplicates
